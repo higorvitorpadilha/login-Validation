@@ -1,0 +1,169 @@
+.test-results {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+  }
+}
+
+.test-summary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+}
+
+.test-summary h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-box.success {
+  background: rgba(76, 175, 80, 0.2);
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.stat-box.info {
+  background: rgba(33, 150, 243, 0.2);
+  border-color: rgba(33, 150, 243, 0.4);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.test-suites {
+  padding: 30px;
+}
+
+.test-suite {
+  margin-bottom: 15px;
+}
+
+.test-suite summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+}
+
+.test-suite summary:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.suite-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.suite-count {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.test-list {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+  margin-top: -2px;
+}
+
+.test-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.test-check {
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.test-name {
+  flex: 1;
+}
+
+.test-footer {
+  background: #e8f5e9;
+  padding: 20px 30px;
+  border-top: 2px solid #4caf50;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.test-footer p {
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .test-summary {
+    padding: 20px;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .test-suites {
+    padding: 20px;
+  }
+
+  .test-suite summary {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .suite-count {
+    align-self: flex-end;
+  }
+}
