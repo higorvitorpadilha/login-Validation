@@ -1,0 +1,17 @@
+{
+  "name": "validador-login",
+  "version": "1.0.0",
+  "description": "Sistema simples de login e sessão com testes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": ["login", "sessao", "authentication"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
